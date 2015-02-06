@@ -1,0 +1,54 @@
+{"$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": {
+    "id": {
+        "type": "string",
+        "maxLength": 50,
+        "minLength": 10,
+        "pattern": "\\d+"
+    },
+    "name": {
+        "type": "string"
+    },
+    "age": {
+        "type": "integer",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "exclusiveMaximum": true
+    },
+    "money": {
+        "type": "number",
+        "minimum": 0.0,
+        "exclusiveMinimum": true
+    },
+    "dept": {
+        "type": "object",
+        "properties": {
+            "deptId": {
+                "type": "string"
+            },
+            "deptName": {
+                "type": "string"
+            }
+        },
+        "required": ["deptId", "deptName"]
+    },
+    "posts": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "postId": {
+                    "type": "string"
+                },
+                "postName": {
+                    "type": "string"
+                }
+            },
+            "required": ["postId", "postName"]
+        },
+        "minItems": 1
+    },
+    "email": {
+        "type": "string",
+        "format": "email"
+    }
+}, "required": ["id", "name", "age", "dept", "email"]}

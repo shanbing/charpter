@@ -1,0 +1,10 @@
+{
+    "id" : "15243728289",
+    "name" : "",
+    "age":26,
+    "dept":{
+        "deptId" : "12",
+        "deptName" : "nn"
+    },
+    "email":"aaa@163.com"
+}
